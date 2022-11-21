@@ -12,6 +12,7 @@ import com.dji.sdk.sample.internal.view.BaseThreeBtnView;
 
 import org.jetbrains.annotations.NotNull;
 
+import dc.common.Logger;
 import dji.common.error.DJIError;
 import dji.common.flightcontroller.ObstacleDetectionSector;
 import dji.common.flightcontroller.VisionDetectionState;
@@ -26,6 +27,7 @@ import dji.sdk.products.Aircraft;
 
 
 /**
+ * 获取智能飞行助手推送数据的类
  * Class that retrieves the push data for Intelligent Flight Assistant
  */
 public class FlightAssistantPushDataView extends BaseThreeBtnView {
@@ -37,6 +39,8 @@ public class FlightAssistantPushDataView extends BaseThreeBtnView {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
+
+        Logger.w(getClass().getName(),ModuleVerificationUtil.isFlightControllerAvailable());
 
         if (ModuleVerificationUtil.isFlightControllerAvailable()) {
             FlightController flightController =

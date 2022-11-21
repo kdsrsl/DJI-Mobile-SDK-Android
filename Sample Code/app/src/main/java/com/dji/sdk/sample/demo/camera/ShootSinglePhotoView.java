@@ -18,6 +18,7 @@ import dji.sdk.camera.Camera;
 import dji.sdk.media.MediaFile;
 
 /**
+ * 拍一张照片
  * Class for shooting single photo.
  */
 public class ShootSinglePhotoView extends BaseThreeBtnView {

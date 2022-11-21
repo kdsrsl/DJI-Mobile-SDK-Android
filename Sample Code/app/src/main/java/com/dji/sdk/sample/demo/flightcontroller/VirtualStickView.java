@@ -41,6 +41,7 @@ import dji.sdk.flightcontroller.Simulator;
 
 
 /**
+ * 虚拟摇杆
  * Class for virtual stick.
  */
 public class VirtualStickView extends RelativeLayout implements View.OnClickListener, CompoundButton.OnCheckedChangeListener, PresentableView {

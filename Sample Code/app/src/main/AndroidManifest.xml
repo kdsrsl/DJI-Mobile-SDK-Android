@@ -17,12 +17,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <uses-feature
         android:name="android.hardware.usb.host"
-        android:required="false"/>
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.usb.accessory"
-        android:required="true"/>
+        android:required="true" />
 
 
     <!-- SDK requirement permission end -->
@@ -37,7 +38,9 @@
         tools:replace="label"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <!--
             ADD API_KEY HERE and make sure you
             are connected to the Internet before
@@ -46,7 +49,7 @@
         <!-- personal key -->
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="Please enter your App key here."/>
+            android:value="7a115bdd5df62e34833a971e" />
         <!-- Required for receiving accessory attachment events.
             This is necessary for product when connecting over USB. -->
 
@@ -59,33 +62,36 @@
             android:theme="@style/AppTheme"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
             </intent-filter>
+
             <meta-data
                 android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
-                android:resource="@xml/accessory_filter"/>
+                android:resource="@xml/accessory_filter" />
         </activity>
 
         <activity
             android:name="com.dji.sdk.sample.demo.payload.PayloadActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
 
         <activity
             android:name="com.dji.sdk.sample.demo.payload.PayloadSendGetDataActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
 
         <activity
             android:name="com.dji.sdk.sample.demo.payload.PayloadWidgetActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
 
         <activity android:name=".demo.utmiss.UTMISSActivity" />
+
+        <activity android:name=".demo.flightcontroller.FlightActivity" />
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import dji.common.util.CommonCallbacks;
 import dji.sdk.useraccount.UserAccountManager;
 
 /**
+ * 登录大疆账号
  * View that can be added to any view that requires the user to be logged in
  */
 

@@ -24,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 
 import com.dji.sdk.sample.R;
+import com.dji.sdk.sample.demo.flightcontroller.FlightActivity;
 import com.dji.sdk.sample.internal.model.ViewWrapper;
 import com.dji.sdk.sample.internal.utils.ToastUtils;
 import com.dji.sdk.sample.internal.view.DemoListView;
@@ -35,6 +36,9 @@ import java.util.Stack;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.sdkmanager.DJISDKManager;
 
+/**
+ * 入口
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -133,6 +137,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //endregion
+
+    public void click(View v) {
+        switch (v.getId()) {
+            case R.id.btn_flight:
+                FlightActivity.start(this);
+                break;
+        }
+    }
 
     private void setupActionBar() {
         ActionBar actionBar = getSupportActionBar();

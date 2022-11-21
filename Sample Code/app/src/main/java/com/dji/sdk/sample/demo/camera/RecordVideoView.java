@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import dji.common.camera.SettingsDefinitions;
 
 /**
+ * 录像
  * Created by dji on 16/1/6.
  */
 public class RecordVideoView extends BaseThreeBtnView {

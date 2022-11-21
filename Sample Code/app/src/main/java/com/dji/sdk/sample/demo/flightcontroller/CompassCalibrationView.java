@@ -17,6 +17,7 @@ import dji.sdk.flightcontroller.FlightController;
 import dji.sdk.products.Aircraft;
 
 /**
+ * 指南针校准
  * Class of compass calibration.
  */
 public class CompassCalibrationView extends BaseThreeBtnView {

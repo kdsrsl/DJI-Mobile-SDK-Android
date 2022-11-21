@@ -21,6 +21,7 @@ import dji.sdk.radar.Radar
 import java.lang.Runnable
 
 /**
+ * 雷达
  * class for radar sample
  */
 class RadarView(context: Context?) : LinearLayout(context), PresentableView, View.OnClickListener {

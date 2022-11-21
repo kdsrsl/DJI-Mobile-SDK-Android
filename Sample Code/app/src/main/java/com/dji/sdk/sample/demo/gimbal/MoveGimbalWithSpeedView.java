@@ -1,18 +1,22 @@
 package com.dji.sdk.sample.demo.gimbal;
 
 import android.content.Context;
+
 import com.dji.sdk.sample.R;
 import com.dji.sdk.sample.internal.controller.DJISampleApplication;
 import com.dji.sdk.sample.internal.view.BaseThreeBtnView;
 import com.dji.sdk.sample.internal.utils.ModuleVerificationUtil;
+
 import dji.common.error.DJIError;
 import dji.common.gimbal.Rotation;
 import dji.common.gimbal.RotationMode;
 import dji.common.util.CommonCallbacks;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
 /**
+ * 根据速度移动云台。
  * Class for moving gimbal with speed.
  */
 public class MoveGimbalWithSpeedView extends BaseThreeBtnView {
@@ -55,7 +59,7 @@ public class MoveGimbalWithSpeedView extends BaseThreeBtnView {
     @Override
     protected void handleLeftBtnClick() {
         if (timer != null) {
-            if(gimbalRotationTimerTask != null) {
+            if (gimbalRotationTimerTask != null) {
                 gimbalRotationTimerTask.cancel();
             }
             timer.cancel();
@@ -66,20 +70,21 @@ public class MoveGimbalWithSpeedView extends BaseThreeBtnView {
 
         if (ModuleVerificationUtil.isGimbalModuleAvailable()) {
             DJISampleApplication.getProductInstance().getGimbal().
-                rotate(null, new CommonCallbacks.CompletionCallback() {
+                    rotate(null, new CommonCallbacks.CompletionCallback() {
 
-                    @Override
-                    public void onResult(DJIError error) {
+                        @Override
+                        public void onResult(DJIError error) {
 
-                    }
-                });
+                        }
+                    });
         }
     }
+
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         if (timer != null) {
-            if(gimbalRotationTimerTask != null) {
+            if (gimbalRotationTimerTask != null) {
                 gimbalRotationTimerTask.cancel();
             }
             timer.cancel();
@@ -115,18 +120,18 @@ public class MoveGimbalWithSpeedView extends BaseThreeBtnView {
         public void run() {
             if (ModuleVerificationUtil.isGimbalModuleAvailable()) {
                 DJISampleApplication.getProductInstance().getGimbal().
-                    rotate(new Rotation.Builder().pitch(pitchValue)
-                                                 .mode(RotationMode.SPEED)
-                                                 .yaw(Rotation.NO_ROTATION)
-                                                 .roll(Rotation.NO_ROTATION)
-                                                 .time(0)
-                                                 .build(), new CommonCallbacks.CompletionCallback() {
+                        rotate(new Rotation.Builder().pitch(pitchValue)
+                                .mode(RotationMode.SPEED)
+                                .yaw(Rotation.NO_ROTATION)
+                                .roll(Rotation.NO_ROTATION)
+                                .time(0)
+                                .build(), new CommonCallbacks.CompletionCallback() {
 
-                        @Override
-                        public void onResult(DJIError error) {
+                            @Override
+                            public void onResult(DJIError error) {
 
-                        }
-                    });
+                            }
+                        });
             }
         }
     }

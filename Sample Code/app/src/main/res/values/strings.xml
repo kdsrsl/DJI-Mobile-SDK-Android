@@ -31,7 +31,7 @@
     <string name="component_listview_battery">Battery</string>
     <string name="component_listview_airlink">Air Link</string>
     <string name="component_listview_remote_controller">Remote Controller</string>
-    <string name="component_listview_mobile_remote_controller">Mobile Remote Controller</string>
+    <string name="component_listview_mobile_remote_controller">Mobile Remote Controller远程控制</string>
     <string name="component_listview_dual_remote_controller">Dual Remote Controller</string>
     <string name="component_listview_mission_manager">Mission Manager (Deprecated)</string>
     <string name="component_listview_timeline_mission_control">Timeline Mission Control</string>
@@ -47,12 +47,12 @@
     <string name="component_listview_radar">Radar</string>
     <string name="component_listview_ldm">LDM</string>
     <string name="component_listview_sdk_4_0">4.0 New Interfaces</string>
-    <string name="component_listview_waypoint_mission_operator">Waypoint Mission Operator</string>
+    <string name="component_listview_waypoint_mission_operator">Waypoint Mission Operator航点任务</string>
     <string name="component_listview_follow_me_mission_operator">Follow Me Mission Operator</string>
     <string name="component_listview_keyed_interface">Keyed Interface Sample</string>
 
     <string name="component_listview_sdk_4_1">4.1 New Interfaces</string>
-    <string name="component_listview_app_activation">App Activation and ADSB View</string>
+    <string name="component_listview_app_activation">App Activation and ADSB View 应用激活</string>
 
     <string name="component_listview_sdk_4_5">4.5 New Interfaces</string>
     <string name="component_listview_sdk_4_6">4.6 New Interfaces</string>
@@ -90,7 +90,7 @@
     <string name="camera_listview_push_info">Push Info</string>
     <string name="camera_listview_iso">Set/Get ISO</string>
     <string name="camera_subtitle_shoot_photo">Shoot Photo</string>
-    <string name="camera_listview_shoot_single_photo">Shoot Single Photo</string>
+    <string name="camera_listview_shoot_single_photo">Shoot Single Photo拍一张照片</string>
     <string name="camera_listview_shoot_super_resolutiob_photo">Shoot Super Resolution Photo</string>
     <string name="camera_listview_shoot_interval_photo">Shoot Interval Photo</string>
     <string name="camera_subtitle_record_video">Record Video</string>
@@ -106,10 +106,10 @@
     <string name="moveToPosition">Skip Time</string>
 
     <!-- Gimbal list -->
-    <string name="gimbal_subtitle_rotate_gimbal">Rotate Gimbal</string>
-    <string name="gimbal_listview_push_info">Push Info</string>
-    <string name="gimbal_listview_rotate_gimbal">Rotate With Speed</string>
-    <string name="gimbal_listview_gimbal_capability">Gimbal Capability</string>
+    <string name="gimbal_subtitle_rotate_gimbal">Rotate Gimbal 旋转云台</string>
+    <string name="gimbal_listview_push_info">Push Info获取云台信息</string>
+    <string name="gimbal_listview_rotate_gimbal">Rotate With Speed 旋转 速度</string>
+    <string name="gimbal_listview_gimbal_capability">Gimbal Capability能力</string>
 
     <!-- Battery list -->
     <string name="battery_subtitle">Battery Information</string>
@@ -122,13 +122,13 @@
 
     <!-- Flight controller list -->
     <string name="flight_controller_subtitle_general">General</string>
-    <string name="flight_controller_listview_compass_calibration">Compass Calibration</string>
-    <string name="flight_controller_listview_flight_limitation">Flight Limitation</string>
-    <string name="flight_controller_subtitle_orientation_mode">Orientation Mode</string>
+    <string name="flight_controller_listview_compass_calibration">Compass Calibration指南针校准</string>
+    <string name="flight_controller_listview_flight_limitation">Flight Limitation飞行限制</string>
+    <string name="flight_controller_subtitle_orientation_mode">Orientation Mode方向</string>
     <string name="flight_controller_listview_orientation_mode">Orientation Mode</string>
-    <string name="flight_controller_subtitle_virtual_stick">Virtual Stick</string>
-    <string name="flight_controller_listview_virtual_stick">Virtual Stick</string>
-    <string name="flight_controller_subtitle_intelligent_flight_assistant">Intelligent Flight Assistant</string>
+    <string name="flight_controller_subtitle_virtual_stick">Virtual Stick虚拟摇杆</string>
+    <string name="flight_controller_listview_virtual_stick">Virtual Stick虚拟摇杆2</string>
+    <string name="flight_controller_subtitle_intelligent_flight_assistant">Intelligent Flight Assistant智能飞行助手</string>
     <string name="flight_controller_listview_intelligent_flight_assistant">Intelligent Flight Assistant</string>
     <string name="flight_controller_listview_networkRTK">Network RTK</string>
 
@@ -181,31 +181,35 @@
     <string name="move_gimbal_in_speed_down">Down</string>
     <string name="move_gimbal_in_speed_description">This view will show how to rotate the gimbal in speed. Please set up
         a timer for keeping sending the rotateGimbalBySpeed with specific values and send null, null, null using
-        rotateGimbalInSpeed to the aircraft.
+        rotateGimbalInSpeed to the aircraft.此视图将显示如何快速旋转云台。 请设置
+         一个计时器，用于保持发送具有特定值的 rotateGimbalBySpeed 并使用发送 null、null、null
+         rotateGimbalInSpeed 到飞机。
     </string>
 
     <!--*************** Flight controller string set ***************-->
     <!-- Compass Calibration View -->
-    <string name="compass_calibration_start_calibration">Start Calibration</string>
+    <string name="compass_calibration_start_calibration">Start Calibration开始校准</string>
     <string name="compass_calibration_stop_calibration">Stop Calibration</string>
     <string name="compass_calibration_description">This view is for calibration. The calibration process includes two
-        parts: horizontal calibration and vertical calibration
+        parts: horizontal calibration and vertical calibration此视图用于校准。 校准过程包括两个
+         部分：水平标定和垂直标定
     </string>
 
     <string name="flight_limitation_set_height_limitation">Set Height Limitation</string>
     <string name="flight_limitation_toggle_enable_radius_limitation">Limitation ON/OFF</string>
     <string name="flight_limitation_set_radius_limitation">Set Radius Limitation</string>
     <string name="flight_limitation_description">The height limitation is always on, the range of the flight limitation
-        is [20, 500]. The range of the radius flight limitation is [15, 500].
+        is [20, 500]. The range of the radius flight limitation is [15, 500].高度限制常开，飞行限制范围
+         是 [20, 500]。 半径飞行限制的范围是[15, 500]。
     </string>
 
     <!-- Orientation Mode View -->
-    <string name="orientation_mode_description">Current Orientation Mode is</string>
-    <string name="orientation_mode_home_lock">Home Lock</string>
-    <string name="orientation_mode_course_lock">Course Lock</string>
-    <string name="orientation_mode_aircraft_heading">Aircraft Heading</string>
+    <string name="orientation_mode_description">Current Orientation Mode is飞行方向</string>
+    <string name="orientation_mode_home_lock">Home Lock 相对返航点</string>
+    <string name="orientation_mode_course_lock">Course Lock相对锁定航向</string>
+    <string name="orientation_mode_aircraft_heading">Aircraft Heading相对机头</string>
 
-    <string name="intelligent_flight_assistant_description">This view is for Intelligent Flight Assistant.</string>
+    <string name="intelligent_flight_assistant_description">This view is for Intelligent Flight Assistant此视图为智能飞行助手.</string>
 
     <!--*************** Airlink string set ***************-->
 

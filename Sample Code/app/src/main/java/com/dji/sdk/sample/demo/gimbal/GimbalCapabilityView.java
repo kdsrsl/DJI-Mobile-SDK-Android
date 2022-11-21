@@ -44,6 +44,7 @@ import dji.sdk.products.Aircraft;
 import dji.sdk.sdkmanager.DJISDKManager;
 
 /**
+ * 旋转云台的类，也给出了多云台产品的例子。
  * The class for rotating the gimbal, also give an example of the product with multiple gimbals.
  */
 public class GimbalCapabilityView extends LinearLayout implements View.OnClickListener, PresentableView {

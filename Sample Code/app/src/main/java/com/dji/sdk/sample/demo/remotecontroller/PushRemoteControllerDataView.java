@@ -14,6 +14,7 @@ import dji.sdk.products.Aircraft;
 import dji.sdk.remotecontroller.RemoteController;
 
 /**
+ * 获取遥控器信息
  * Class for getting remote controller information.
  */
 public class PushRemoteControllerDataView extends BasePushDataView {

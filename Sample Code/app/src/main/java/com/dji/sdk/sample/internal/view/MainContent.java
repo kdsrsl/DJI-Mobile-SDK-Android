@@ -81,7 +81,7 @@ public class MainContent extends RelativeLayout {
             Manifest.permission.BLUETOOTH, // Bluetooth connected products
             Manifest.permission.BLUETOOTH_ADMIN, // Bluetooth connected products
             Manifest.permission.READ_EXTERNAL_STORAGE, // Log files
-            Manifest.permission.READ_PHONE_STATE, // Device UUID accessed upon registration
+//            Manifest.permission.READ_PHONE_STATE, // Device UUID accessed upon registration
             Manifest.permission.RECORD_AUDIO // Speaker accessory
     };
     private static final int REQUEST_PERMISSION_CODE = 12345;
@@ -480,6 +480,9 @@ public class MainContent extends RelativeLayout {
         }
     }
 
+    /**
+     * APP注册到大疆
+     */
     private void startSDKRegistration() {
         if (isRegistrationInProgress.compareAndSet(false, true)) {
             AsyncTask.execute(new Runnable() {
@@ -568,6 +571,7 @@ public class MainContent extends RelativeLayout {
                         });
 
                     } else {
+                        //注册APP到大疆后台，验证SK
                         DJISDKManager.getInstance().registerApp(mContext.getApplicationContext(), new DJISDKManager.SDKManagerCallback() {
                             @Override
                             public void onRegister(DJIError djiError) {

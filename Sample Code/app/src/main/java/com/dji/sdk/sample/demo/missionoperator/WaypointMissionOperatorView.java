@@ -47,6 +47,9 @@ import dji.sdk.products.Aircraft;
 import static dji.keysdk.FlightControllerKey.HOME_LOCATION_LATITUDE;
 import static dji.keysdk.FlightControllerKey.HOME_LOCATION_LONGITUDE;
 
+/**
+ * 航点任务操作员视图
+ */
 public class WaypointMissionOperatorView extends MissionBaseView {
 
     private static final double BASE_LATITUDE = 22;
